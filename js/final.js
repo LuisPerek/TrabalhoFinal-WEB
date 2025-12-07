@@ -40,6 +40,9 @@ function guardarDespesa(){
     }
 
     localStorage.setItem("despesas", JSON.stringify(despesas));
+    document.getElementById("inputNome").value = "";
+    document.getElementById("inputData").value = "";
+    document.getElementById("inputValor").value = "";
     atualizarTabela();
 
 

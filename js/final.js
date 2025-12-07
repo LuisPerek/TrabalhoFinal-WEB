@@ -29,6 +29,11 @@ function guardarDespesa(){
     const data = document.getElementById("inputData").value;
     const valor = parseFloat(document.getElementById("inputValor").value) || 0;
     const id = document.getElementById("inputId").value;
+
+    if (!nome || !data || valor <= 0) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
     
     const despesa = {nome: nome, data:data, valor: valor};
     

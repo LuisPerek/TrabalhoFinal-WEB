@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/final.css">
+
+</head>
+<body>
+    <div class="pagina">
+        <div class="esquerda">
+
+            <div class="divSalario">
+                <Label class="labT">Salario:</Label><br>
+                <div class="divForm">
+                    <Label>R$</Label>
+                    <input type="number" id="inputSalario" />
+                    <button id="btSalario">Save</button>
+                </div>
+                
+            </div>
+
+            <div class="divDespesas">
+                <Label class="labT">Despesa:</Label>
+
+                <div class="divForm">
+                    <Label>Descrição:</Label><br>
+                    <input type="text" id="inputNome"><br>
+                    <Label>Data:</Label><br>
+                    <input type="date" id="inputData"><br>
+                    <Label>Valor:</Label><br>
+                    <input type="number" id="inputValor"><br>
+
+                    <input type="hidden" id="inputId">
+                    <button id="btDespesa">Add</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="direita">
+            <div class="divResumo">
+                <Label class="labT">Tabela de gastos:</Label><br><br>
+
+                <div id="tabelaDespesas">
+                    <table>
+                        <thead id="headDespesas">
+                            <tr>
+                                <th>ID</th>
+                                <th>Descrição</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+                                <th></th>
+                                <th></th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="bodyDespesas">
+                    </table>
+                </div>
+            </div>
+
+            <div class="divSaldo">
+                <div class="saldoRow">
+                    <div class="saldoCol" id="salario">
+                        <label for="">Salario</label>
+                        <label id="labelSalario">22</label>
+                    </div>
+                    <label>-</label>
+                    <div class="saldoCol" id="despesas">
+                        <label for="">Despesas</label>
+                        <label id="labelDespesa">9</label>
+                    </div>
+                    <label>=</label>
+                    <div class="saldoCol" id="saldo">
+                        <label for="">Saldo</label>
+                        <label id="labelSaldo">13</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="js/final.js"></script>
+</body>
+</html>

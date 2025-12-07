@@ -1,0 +1,259 @@
+body{
+    background-color: #212121;
+    font-family: sans-serif;
+    margin-top: 60px;
+    margin-left: 175px;
+    margin-right: 175px;
+    color: white;
+    font-size: 26px;
+    line-height: 1.4;
+    
+}
+
+input{
+    font-size: 20px;
+    padding: 8px;
+    margin: 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid #c3c1c1;
+}
+
+button{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.pagina{
+    display: flex;
+    gap: 30px;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+}
+
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+}
+
+
+.labT{
+    font-size: 32px;
+}
+
+.divSalario{
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #5a9c4d;
+    height: 90px;
+}
+
+.divDespesas{
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #a83e3e;
+    height: 400px;
+    
+}
+
+.divResumo{
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #4a90e2;
+    height: 400px;
+    line-height: 1;
+}
+
+.divSaldo{
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #f5a623;
+    height: 90px;
+}
+
+.divForm{
+    text-align: center;
+}
+
+.divSalario input{
+    background-color: #e6ffea;
+    border: #64a86d 2px solid;
+}
+
+.divDespesas input{
+    background-color: #e6ffea;
+    border: #e57373 2px solid;
+}
+
+.divSalario button{
+    background-color: #528844;
+    color: white;
+    border: 2px solid #70b668;
+}
+
+.divDespesas button{
+    background-color: #922c2c;
+    color: white;
+    border: 2px solid #e57373;
+    margin: 16px;
+    padding: 8px 40px;
+}
+
+
+#inputSalario{
+    width: 40%;
+}
+#inputNome{
+    width: 85%;
+    background-color: #ffe9e9;
+}
+
+#inputData{
+    background-color: #ffe9e9;
+}
+
+#inputValor{
+    width: 40%;
+    background-color: #ffe9e9;
+}
+
+#tabelaDespesas{
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    height: 85%;
+    border-radius: 6px;
+    margin: 0 auto;
+    
+}
+
+td, th {
+    border: 1px solid #9cafd3;
+    padding: 8px 4px;
+    text-align: center;
+    font-size: 18px;
+}
+
+td{
+    color:#042244;
+    background-color: #b2daff;
+}
+
+th {
+    background-color: #396ca7;
+    color: white;
+}
+
+
+th:nth-child(1){
+    display: none;
+
+}
+
+th:nth-child(5),
+th:nth-child(6){
+    display: none;
+}
+
+
+td:nth-child(1){
+    display: none;
+
+}
+
+td:nth-child(3){
+    width: 110px;
+}
+td:nth-child(4){
+    width: 110px;
+}
+
+td:nth-child(5),
+td:nth-child(6){
+    background: none !important;
+    border: none !important;
+    width: 40px;
+}
+
+td:nth-child(5) button{
+    background-color: #f0ad4e;
+    color: rgb(0, 0, 0);
+    border: 2px solid #f7c17a;
+    padding: 2px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+td:nth-child(6) button{
+    background-color: #d9534f;
+    color: rgb(0, 0, 0);
+    border: 2px solid #e57373;
+    padding: 2px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.saldoRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    font-size: 60px;
+}
+
+.saldoCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+#salario{
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 8px solid #43854b;
+    color: #000000;
+    height: 45px;
+    width: 15%;
+}
+
+#despesas{
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    border: 8px solid #a83232;
+    color: #000000;
+    height: 45px;
+    width: 15%;
+}
+
+#saldo{
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 8px solid #43854b;
+    color: #000000;
+    height: 45px;
+    width: 15%;
+}

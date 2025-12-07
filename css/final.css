@@ -1,3 +1,5 @@
+/* geral */
+
 body{
     background-color: #212121;
     font-family: sans-serif;
@@ -27,7 +29,7 @@ button{
     font-size: 20px;
 }
 
-
+/* layout */
 .pagina{
     display: flex;
     gap: 30px;
@@ -53,32 +55,34 @@ button{
     font-size: 32px;
 }
 
-.divSalario{
+
+/* divs coloridas*/
+.divSalario,
+.divDespesas,
+.divResumo,
+.divSaldo {
     padding: 16px;
     border-radius: 20px;
+}
+
+.divSalario{
     background-color: #5a9c4d;
     height: 90px;
 }
 
 .divDespesas{
-    padding: 16px;
-    border-radius: 20px;
     background-color: #a83e3e;
     height: 400px;
     
 }
 
 .divResumo{
-    padding: 16px;
-    border-radius: 20px;
     background-color: #4a90e2;
     height: 400px;
     line-height: 1;
 }
 
 .divSaldo{
-    padding: 16px;
-    border-radius: 20px;
     background-color: #f5a623;
     height: 90px;
 }
@@ -86,6 +90,9 @@ button{
 .divForm{
     text-align: center;
 }
+
+
+/* inputs e botões especificos*/
 
 .divSalario input{
     background-color: #e6ffea;
@@ -111,7 +118,6 @@ button{
     padding: 8px 40px;
 }
 
-
 #inputSalario{
     width: 40%;
 }
@@ -128,6 +134,8 @@ button{
     width: 40%;
     background-color: #ffe9e9;
 }
+
+/* tabela */
 
 #tabelaDespesas{
     overflow-y: auto;
@@ -162,20 +170,13 @@ th {
 }
 
 
-th:nth-child(1){
-    display: none;
-
-}
-
+th:nth-child(1),
+td:nth-child(1),
 th:nth-child(5),
-th:nth-child(6){
+th:nth-child(6),
+td:nth-child(5),
+td:nth-child(6) {
     display: none;
-}
-
-
-td:nth-child(1){
-    display: none;
-
 }
 
 td:nth-child(3){
@@ -211,6 +212,8 @@ td:nth-child(6) button{
     cursor: pointer;
     font-size: 14px;
 }
+
+/* resumo saldo*/
 
 .saldoRow{
     display: flex;

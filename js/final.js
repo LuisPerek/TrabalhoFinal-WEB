@@ -13,12 +13,25 @@ document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.getItem("salario")) {
         document.getElementById("inputSalario").value = parseFloat(localStorage.getItem("salario")).toFixed(2);
     }
+
+    localStorage.setItem("saldo", 0);
+
+    let saldo = parseFloat(localStorage.getItem("saldo")) || null;
+    if (!saldo){
+        saldo = 0;
+        localStorage.setItem("saldoAtual", saldo);
+
+    }
+
 });
 
 
 function guardarSalario(){
     const salario = parseFloat(document.getElementById("inputSalario").value) || 0;
     localStorage.setItem("salario", salario);
+
+    localStorage.setItem("saldo", parseFloat(localStorage.getItem("saldoAtual")));
+
     atualizarSaldo();
 }
 
@@ -96,11 +109,16 @@ function deletarDespesa(id){
 function atualizarSaldo(){
     const salario = parseFloat(localStorage.getItem("salario")) || 0;
     const despesaTotal = parseFloat(localStorage.getItem("despesaTotal")) || 0;
-    const saldo = salario - despesaTotal;
+    const saldo = parseFloat(localStorage.getItem("saldo")) || 0;
+    const soma = salario + saldo;
+    const newSaldo = soma - despesaTotal;
+
+    localStorage.setItem("saldoAtual",newSaldo);
 
     document.getElementById("labelSalario").innerText = "R$" + salario.toFixed(2);
     document.getElementById("labelDespesa").innerText = "R$" + despesaTotal.toFixed(2);
-    document.getElementById("labelSaldo").innerText = "R$" + saldo.toFixed(2);
+    document.getElementById("labelSaldo").innerText = "R$" + newSaldo.toFixed(2);
+    document.getElementById("labelsaldo").innerHTML =  "+ saldo: R$" + saldo.toFixed(2)
 
     if (saldo >= 0) {
         document.getElementById("saldo").style.border = "8px solid #43854b";
@@ -108,4 +126,4 @@ function atualizarSaldo(){
         document.getElementById("saldo").style.border = "8px solid #a83232"
     }
 
-}
+}"R$" + newSaldo.toFixed(2)

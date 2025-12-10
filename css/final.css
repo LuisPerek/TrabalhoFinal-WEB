@@ -258,3 +258,7 @@ td:nth-child(6) button{
     height: 45px;
     width: 15%;
 }
+
+#labelsaldo{
+    font-size: 12px;
+}
